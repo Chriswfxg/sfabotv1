@@ -15,7 +15,7 @@ if (localStorage.getItem("rules")) {
 
 let editingKeyword = null;  // Track if editing a rule
 
-// Function to display the current rules (used on the rules page)
+// Display the current rules stored in localStorage
 function displayRules() {
     const rulesList = document.getElementById("rules-list");
     rulesList.innerHTML = "";  // Clear existing list
@@ -29,58 +29,36 @@ function displayRules() {
     }
 }
 
-// Function to add or edit a rule (used on the rules page)
+// Add or edit a rule
 function addOrEditRule() {
     const keyword = document.getElementById("keyword-input").value.toLowerCase();
     const response = document.getElementById("response-input").value;
-
-    if (keyword && response) {
-        rules[keyword] = response;
-
-        // Store updated rules in localStorage
-        localStorage.setItem("rules", JSON.stringify(rules));
-
-        // If editing, reset the editing flag
-        if (editingKeyword !== null) {
-            editingKeyword = null;
-        }
-
-        // Update the rules display
-        displayRules();
-
-        // Clear the input fields
-        document.getElementById("keyword-input").value = "";
-        document.getElementById("response-input").value = "";
-    }
+    rules[keyword] = response;
+    localStorage.setItem("rules", JSON.stringify(rules));  // Save to localStorage
+    displayRules();  // Refresh the display
 }
 
-// Function to edit a rule (used on the rules page)
+// Edit an existing rule
 function editRule(keyword) {
     document.getElementById("keyword-input").value = keyword;
     document.getElementById("response-input").value = rules[keyword];
-    editingKeyword = keyword;  // Set the rule being edited
 }
 
-// Function to delete a rule (used on the rules page)
+// Delete a rule
 function deleteRule(keyword) {
     delete rules[keyword];
-
-    // Store updated rules in localStorage
-    localStorage.setItem("rules", JSON.stringify(rules));
-
-    displayRules();  // Refresh the rules display
+    localStorage.setItem("rules", JSON.stringify(rules));  // Update localStorage
+    displayRules();  // Refresh the display
 }
 
-// Function to send a message (used on the chat page)
+// Send a message and get a response from the bot
 function sendMessage() {
     const userInput = document.getElementById("user-input").value.toLowerCase();
     const messageBox = document.getElementById("message-box");
 
-    // Show user input in chat
+    // Show user input in chat (aligned to the left)
     messageBox.innerHTML += `<div class="user-message">${userInput}</div>`;
-
-    // Clear the input field
-    document.getElementById("user-input").value = "";
+    document.getElementById("user-input").value = "";  // Clear the input field
 
     // Delay the bot's response by 3 seconds
     setTimeout(() => {
@@ -94,6 +72,7 @@ function sendMessage() {
             }
         }
 
+        // Show the bot response (aligned to the right)
         messageBox.innerHTML += `<div class="bot-message">${response}</div>`;
         messageBox.scrollTop = messageBox.scrollHeight;  // Scroll to the bottom
     }, 3000);
