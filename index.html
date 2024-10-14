@@ -37,21 +37,22 @@
         }
         .user-message, .bot-message {
             margin-bottom: 10px;
-            max-width: 70%;
             padding: 8px 12px;
             border-radius: 10px;
-            display: inline-block;
+            display: block;
+            clear: both;
+            max-width: 70%;
         }
         .user-message {
             background-color: #007bff;
             color: white;
-            align-self: flex-end;
+            align-self: flex-start; /* User message on left */
             border-bottom-right-radius: 0;
         }
         .bot-message {
             background-color: #f1f0f0;
             color: black;
-            align-self: flex-start;
+            align-self: flex-end; /* Bot message on right */
             border-bottom-left-radius: 0;
         }
         .input-container {
@@ -95,6 +96,6 @@
         <a href="rules.html">Go to Manage Rules</a>
     </div>
 
-    <script src="script.js"></script>  <!-- Single script file -->
+    <script src="script.js"></script>
 </body>
 </html>
