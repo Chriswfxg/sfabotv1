@@ -35,18 +35,21 @@
             font-size: 18px;
             line-height: 1.4;
             word-wrap: break-word;
-            max-width: 75%;
+            width: 100%;  /* Ensure full width usage */
         }
         .user-message {
             color: white;
             align-self: flex-start;
             text-align: left;
+            max-width: 75%;  /* Limit width for user messages */
         }
         .bot-message {
             color: white;
             align-self: flex-end;
             text-align: right;
             margin-left: auto;
+            max-width: 75%;  /* Limit width for bot messages */
+            margin-right: 0;  /* Ensure bot message is aligned to the right */
         }
         .input-container {
             display: flex;
