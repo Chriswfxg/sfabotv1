@@ -1,18 +1,23 @@
-let rules = {};
-
-// Load rules from localStorage (if any)
-if (localStorage.getItem("rules")) {
-    rules = JSON.parse(localStorage.getItem("rules"));
-} else {
-    // Default rules if none exist
-    rules = {
+let rules = {
         "hello": "Hi! How can I help you today?",
         "how are you": "I'm a bot, but I'm doing great! Thanks for asking.",
         "bye": "Goodbye! Have a great day.",
-        "hola": "heyo"
+        "hola": "heeeey"
     };
-    localStorage.setItem("rules", JSON.stringify(rules));  // Store default rules
-}
+
+// Load rules from localStorage (if any)
+// if (localStorage.getItem("rules")) {
+//     rules = JSON.parse(localStorage.getItem("rules"));
+// } else {
+//     // Default rules if none exist
+//     rules = {
+//         "hello": "Hi! How can I help you today?",
+//         "how are you": "I'm a bot, but I'm doing great! Thanks for asking.",
+//         "bye": "Goodbye! Have a great day.",
+//         "hola": "heyo"
+//     };
+//     localStorage.setItem("rules", JSON.stringify(rules));  // Store default rules
+// }
 
 // Send a message and get a response from the bot
 function sendMessage() {
