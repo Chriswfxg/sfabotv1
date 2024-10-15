@@ -8,7 +8,8 @@ if (localStorage.getItem("rules")) {
     rules = {
         "hello": "Hi! How can I help you today?",
         "how are you": "I'm a bot, but I'm doing great! Thanks for asking.",
-        "bye": "Goodbye! Have a great day."
+        "bye": "Goodbye! Have a great day.",
+        "hola": "heyo"
     };
     localStorage.setItem("rules", JSON.stringify(rules));  // Store default rules
 }
