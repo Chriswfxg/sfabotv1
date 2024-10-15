@@ -25,7 +25,7 @@ let rules = {
 
 // Send a message and get a response from the bot
 function sendMessage() {
-    const userInput = document.getElementById("user-input");
+    const userInput = document.getElementById("user-input").value;
     const messageBox = document.getElementById("message-box");
 
     // Show user input in chat (aligned to the left)
