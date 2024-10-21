@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full-Screen Chat Interface</title>
     <style>
-        /* Full-screen layout with dark mode */
         * {
             margin: 0;
-            padding: 100;
+            padding: 0;
             box-sizing: border-box;
         }
         body {
@@ -19,8 +18,23 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            color: #f1f1f1;
+            color: #333;
+            position: relative;
+            overflow: hidden;
         }
+        
+        /* Watermark Styling */
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            color: rgba(0, 0, 0, 0.05);  /* Light transparent black */
+            z-index: 0;
+            pointer-events: none;  /* To ensure it doesn't interfere with clicks */
+        }
+
         .chat-container {
             flex: 1;
             display: flex;
@@ -28,48 +42,59 @@
             overflow-y: auto;
             padding: 20px;
             padding-bottom: 80px;
+            z-index: 1;  /* Ensure it's above the watermark */
         }
+
         .message {
             display: flex;
             margin-bottom: 10px;
+            padding: 10px 20px;
             font-size: 18px;
             line-height: 1.4;
             word-wrap: break-word;
-            width: 100%;  /* Ensure full width usage */
+            max-width: 75%;  /* Limit width for messages */
+            border-radius: 20px;
         }
+
         .user-message {
+            background-color: #007bff;
             color: white;
             align-self: flex-start;
             text-align: left;
-            max-width: 75%;  /* Limit width for user messages */
+            border-bottom-right-radius: 0;
         }
+
         .bot-message {
-            color: white;
+            background-color: #ffffff;
+            color: #333;
             align-self: flex-end;
             text-align: right;
             margin-left: auto;
-            max-width: 75%;  /* Limit width for bot messages */
-            margin-right: 0;  /* Ensure bot message is aligned to the right */
+            border-bottom-left-radius: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect for bot messages */
         }
+
         .input-container {
             display: flex;
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #222;
+            background-color: #ffffff;
             padding: 20px;
-            border-top: 1px solid #444;
+            border-top: 1px solid #ccc;
         }
+
         .user-input {
             flex: 1;
             padding: 15px;
             border-radius: 30px;
-            border: none;
+            border: 1px solid #ccc;
             outline: none;
-            background-color: #333;
-            color: white;
+            background-color: #f9f9f9;
+            color: #333;
             font-size: 18px;
         }
+
         .send-button {
             background-color: #007bff;
             border: none;
@@ -80,14 +105,20 @@
             cursor: pointer;
             font-size: 22px;
         }
+
         .send-button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <!-- Watermark -->
+    <div class="watermark">Adopt AI</div>
+
+    <!-- Chat Container -->
     <div class="chat-container" id="message-box"></div>
 
+    <!-- Input Container -->
     <div class="input-container">
         <input type="text" class="user-input" id="user-input" placeholder="Type a message...">
         <button class="send-button" onclick="sendMessage()">&#x27A4;</button>
