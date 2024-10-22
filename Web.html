@@ -43,32 +43,33 @@
             z-index: 1;  /* Ensure it's above the watermark */
         }
 
-        .message {
+        .message-wrapper {
             display: flex;
+            justify-content: flex-start;
             margin-bottom: 10px;
-            padding: 12px 18px;
-            font-size: 18px;
-            line-height: 1.4;
-            word-wrap: break-word;
-            max-width: 70%;  /* Limit width for messages */
-            border-radius: 20px;
         }
 
         .user-message {
             background-color: #007bff;
             color: white;
-            text-align: left;
-            align-self: flex-start;  /* User message aligned left */
+            padding: 12px 18px;
+            max-width: 70%;
             border-radius: 15px;
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        .bot-message-wrapper {
+            justify-content: flex-end;
         }
 
         .bot-message {
             background-color: #ffffff;
             color: #333;
-            text-align: left;
-            align-self: flex-end;  /* Bot message aligned right */
+            padding: 12px 18px;
+            max-width: 70%;
             border-radius: 15px;
-            margin-left: auto;  /* Push message fully to the right */
+            text-align: left;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect for bot messages */
         }
 
