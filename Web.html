@@ -40,6 +40,7 @@
             flex-direction: column;
             overflow-y: auto;
             padding: 20px;
+            padding-bottom: 80px;
             z-index: 1;  /* Ensure it's above the watermark */
         }
 
@@ -50,9 +51,8 @@
             font-size: 18px;
             line-height: 1.4;
             word-wrap: break-word;
-            max-width: 75%;  /* Limit width for messages */
+            max-width: 70%;  /* Limit width for messages */
             border-radius: 20px;
-            flex-shrink: 0;
         }
 
         .user-message {
@@ -60,7 +60,8 @@
             color: white;
             align-self: flex-start;
             text-align: left;
-            border-radius: 15px;
+            border-radius: 25px;
+            margin-right: auto;  /* Make sure user messages are aligned to the left */
         }
 
         .bot-message {
@@ -68,8 +69,8 @@
             color: #333;
             align-self: flex-end;
             text-align: left;
-            margin-left: auto;
-            border-radius: 15px;
+            margin-left: auto;  /* Make sure bot messages are aligned to the right */
+            border-radius: 25px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect for bot messages */
         }
 
