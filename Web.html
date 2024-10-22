@@ -53,6 +53,7 @@
             word-wrap: break-word;
             max-width: 75%;  /* Limit width for messages */
             border-radius: 20px;
+            flex-shrink: 0;
         }
 
         .user-message {
@@ -77,6 +78,8 @@
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect for bot messages */
+            padding-right: 0;  /* Remove extra padding on the right */
+            margin-right: 0;  /* Ensure the message reaches the right edge */
         }
 
         .input-container {
