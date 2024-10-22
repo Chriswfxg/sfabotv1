@@ -51,6 +51,7 @@
             font-size: 18px;
             line-height: 1.4;
             word-wrap: break-word;
+            width: fit-content;  /* Ensure messages only take up the necessary space */
             max-width: 70%;  /* Limit width for messages */
             border-radius: 20px;
         }
@@ -60,8 +61,8 @@
             color: white;
             align-self: flex-start;
             text-align: left;
-            border-radius: 25px;
-            margin-right: auto;  /* Make sure user messages are aligned to the left */
+            border-radius: 15px;
+            margin-right: auto;  /* Ensure user messages stick to the left */
         }
 
         .bot-message {
@@ -69,8 +70,8 @@
             color: #333;
             align-self: flex-end;
             text-align: left;
-            margin-left: auto;  /* Make sure bot messages are aligned to the right */
-            border-radius: 25px;
+            margin-left: auto;  /* Ensure bot messages stick to the right */
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect for bot messages */
         }
 
