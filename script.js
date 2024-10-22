@@ -1,3 +1,4 @@
+// Load rules from localStorage (if any)
 let rules = {
         "hello": "Hi! How can I help you today?",
         "how are you": "I'm a bot, but I'm doing great! Thanks for asking.",
@@ -10,28 +11,25 @@ let rules = {
         "Hey, can you help me approve the quote that was sent for GenePoint": "Hey there, you cannot approve quotes directly in Copilot. Click <a href=\"https://whatfix-cc-dev-ed.lightning.force.com/lightning/o/SBQQ__Quote__c/list?c__wfx=a6d2ed20-c3b5-41e6-9974-cc8bd75182b5&c__wfx_stage=design&c__wfx_state=draft&filterName=__Recent\">approve quote</a> to do it on the application"
     };
 
-// Load rules from localStorage (if any)
-// if (localStorage.getItem("rules")) {
-//     rules = JSON.parse(localStorage.getItem("rules"));
-// } else {
-//     // Default rules if none exist
-//     rules = {
-//         "hello": "Hi! How can I help you today?",
-//         "how are you": "I'm a bot, but I'm doing great! Thanks for asking.",
-//         "bye": "Goodbye! Have a great day.",
-//         "hola": "heyo"
-//     };
-//     localStorage.setItem("rules", JSON.stringify(rules));  // Store default rules
-// }
-
-// Send a message and get a response from the bot
+// Function to send a message and get a response from the bot
 function sendMessage() {
-    const userInput = document.getElementById("user-input").value;
+    const userInput = document.getElementById("user-input").value.toLowerCase();
     const messageBox = document.getElementById("message-box");
 
-    // Show user input in chat (aligned to the left)
-    messageBox.innerHTML += `<div class="message"><div class="user-message">${userInput}</div></div>`;
-    document.getElementById("user-input").value = "";  // Clear the input field
+    // Clear the input field after sending the message
+    document.getElementById("user-input").value = "";
+
+    // Add user message to the chat
+    const userMessageWrapper = document.createElement('div');
+    userMessageWrapper.classList.add('message-wrapper');
+    const userMessage = document.createElement('div');
+    userMessage.classList.add('user-message');
+    userMessage.textContent = userInput;
+    userMessageWrapper.appendChild(userMessage);
+    messageBox.appendChild(userMessageWrapper);
+
+    // Scroll to the bottom
+    messageBox.scrollTop = messageBox.scrollHeight;
 
     // Delay the bot's response by 3 seconds
     setTimeout(() => {
@@ -45,8 +43,16 @@ function sendMessage() {
             }
         }
 
-        // Show the bot response (aligned to the right)
-        messageBox.innerHTML += `<div class="message"><div class="bot-message">${response}</div></div>`;
-        messageBox.scrollTop = messageBox.scrollHeight;  // Scroll to the bottom
+        // Add bot response to the chat
+        const botMessageWrapper = document.createElement('div');
+        botMessageWrapper.classList.add('message-wrapper', 'bot-message-wrapper');
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('bot-message');
+        botMessage.textContent = response;
+        botMessageWrapper.appendChild(botMessage);
+        messageBox.appendChild(botMessageWrapper);
+
+        // Scroll to the bottom
+        messageBox.scrollTop = messageBox.scrollHeight;
     }, 3000);
 }
