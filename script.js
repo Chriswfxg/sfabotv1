@@ -48,7 +48,7 @@ function sendMessage() {
         botMessageWrapper.classList.add('message-wrapper', 'bot-message-wrapper');
         const botMessage = document.createElement('div');
         botMessage.classList.add('bot-message');
-        botMessage.textContent = response;
+        botMessage.innerHTML = response;
         botMessageWrapper.appendChild(botMessage);
         messageBox.appendChild(botMessageWrapper);
 
