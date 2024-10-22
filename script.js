@@ -13,7 +13,7 @@ let rules = {
 
 // Function to send a message and get a response from the bot
 function sendMessage() {
-    const userInput = document.getElementById("user-input").value.toLowerCase();
+    const userInput = document.getElementById("user-input").value;
     const messageBox = document.getElementById("message-box");
 
     // Clear the input field after sending the message
