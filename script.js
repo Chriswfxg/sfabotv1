@@ -20,9 +20,9 @@ let rules = {
   "update the opportunity type and change the forecast category": "Got it! Click the link below to update your Opportunity Type & Forecast Category... <a href=\"https://whatfix.crm8.dynamics.com/...\">Update Opportunity</a>",
   "Hey, can you help me create a task on Microsoft Dynamics": "Hey there, I can help you create a task. Click <a href=\"https://whatfix.crm8.dynamics.com/...\">create task</a> to do it on the application",
   
-  "Can you explain the overview of create sales order": `
-    <h2>Create Sales Order Process – SAP ECC (Organization-Specific)</h2>
-    <p>In our organization, the <strong>Sales Order Creation</strong> process in <strong>SAP ECC</strong> is initiated when a customer places a confirmed purchase request...</p>
+  "Can you explain the overview of create sales order process": `
+    <h3>Create Sales Order Process – SAP ECC</h3>
+    <p>In Whatfix, the <strong>Sales Order Creation</strong> process in <strong>SAP ECC</strong> is initiated when a customer places a confirmed purchase request...</p>
     <h3>1. Sales Area Selection</h3>
     <p>The sales user logs into <strong>SAP GUI</strong> and accesses transaction <strong>VA01</strong> to create a sales order...</p>
     <h3>2. Customer and Order Type Entry</h3>
@@ -37,7 +37,7 @@ let rules = {
     <p>The sales user reviews all order lines, totals, and terms, then saves the document...</p>
     <h3>Organization-Specific Notes:</h3>
     <ul>
-      <li>All sales orders above ₹5,00,000 are <strong>auto-routed for approval</strong> via workflow.</li>
+      <li>All sales orders above $5,000 are <strong>auto-routed for approval</strong> via workflow.</li>
       <li>Orders for strategic accounts are tagged under <strong>Key Account Management</strong>...</li>
       <li>Integration with <strong>SAP SD, MM, and FI</strong> ensures inventory commitment...</li>
     </ul>
