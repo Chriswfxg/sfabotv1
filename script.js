@@ -19,6 +19,7 @@ let rules = {
   "last login": "<p> Here’s a summary of the critical events that have occurred since your last login: ...</p>",
   "update the opportunity type and change the forecast category": "Got it! Click the link below to update your Opportunity Type & Forecast Category... <a href=\"https://whatfix.crm8.dynamics.com/...\">Update Opportunity</a>",
   "Hey, can you help me create a task on Microsoft Dynamics": "Hey there, I can help you create a task. Click <a href=\"https://whatfix.crm8.dynamics.com/...\">create task</a> to do it on the application",
+  "can you help me create sales order items":"Hey there, I can help you create a task. Click <a href=\"https://my405746.s4hana.cloud.sap/ui?_wfx_=22edd632-f7ef-4694-a823-90ad737ca160&_wfx_stage=production&_wfx_state=null#Shell-home\">create task</a> to do it on the application",
   
   "Can you explain the overview of create sales order process": `
     <h3>Create Sales Order Process – SAP ECC</h3>
