@@ -17,7 +17,62 @@ let rules = {
         "cross-sell and up-sell":"<p> For the <strong>Greentech Partnership</strong> opportunity, I have identified the following cross-sell and up-sell opportunities based on the customer’s purchase history and current discussions:<br><strong>1. Cross-Sell Opportunity:</strong> <em>Product X</em> (Energy Efficiency Add-on): Complements their current solution by optimizing energy usage, aligning with their sustainability goals. Estimated value: <strong>$50,000</strong>.<br><strong>2. Up-Sell Opportunity:</strong> <em>Product Y</em> (Premium Monitoring Service): An upgrade to their existing service, offering real-time monitoring and advanced analytics to enhance operational efficiency. Estimated value: <strong>$75,000</strong>.<br>These recommendations are based on Greentech's focus on sustainability and efficiency.</p>",
         "last login":"<p> Here’s a summary of the critical events that have occurred since your last login:<br><strong>1. Opportunity: Greentech Partnership</strong> – A follow-up meeting was completed, and the customer has requested additional information on the premium monitoring service. The opportunity has moved to the negotiation stage.<br><strong>2. Lead: Brampton Industries</strong> – A new lead was created based on their inquiry about sustainable energy solutions. The sales team has scheduled an introductory call for next week.<br><strong>3. Case: Product Support Request #4532</strong> – A high-priority support case was opened by EcoTech regarding a technical issue with their monitoring system. The case has been escalated to the engineering team for resolution.<br><strong>4. Quote: Solar Solutions</strong> – A new quote was generated and sent to the customer, including the cross-sell recommendations. The customer has acknowledged receipt and will review by the end of the week. Would you like further details or next steps on any of these events?</p>",
         "update the opportunity type and change the forecast category" : "Got it! Click the link below to update your Opportunity Type & Forecast Category in Dynamics 365 with guided steps. <br> <a href=\"https://whatfix.crm8.dynamics.com/main.aspx?appid=7e9bfbf5-e1ad-ea11-a813-000d3af03ad1&forceUCI=1&pagetype=entitylist&etn=activitypointer&viewid=00000000-0000-0000-00aa-000010001899&viewType=1039#_wfx_=887a5193-2ee5-4aae-8379-17c770320c07&_wfx_stage=production&_wfx_state=null\"> Update Opportunity </a>",
-        "Hey, can you help me create a task on Microsoft Dynamics": "Hey there, I can help you create a task, Click <a href=\"https://whatfix.crm8.dynamics.com/main.aspx?appid=7e9bfbf5-e1ad-ea11-a813-000d3af03ad1&forceUCI=1&pagetype=entitylist&etn=activitypointer&viewid=00000000-0000-0000-00aa-000010001899&viewType=1039#_wfx_=db20de60-cec6-42cc-b66e-fb22c87a5d86&_wfx_stage=production&_wfx_state=null\">create task</a> to do it on the application"
+        "Hey, can you help me create a task on Microsoft Dynamics": "Hey there, I can help you create a task, Click <a href=\"https://whatfix.crm8.dynamics.com/main.aspx?appid=7e9bfbf5-e1ad-ea11-a813-000d3af03ad1&forceUCI=1&pagetype=entitylist&etn=activitypointer&viewid=00000000-0000-0000-00aa-000010001899&viewType=1039#_wfx_=db20de60-cec6-42cc-b66e-fb22c87a5d86&_wfx_stage=production&_wfx_state=null\">create task</a> to do it on the application",
+        "Can you explain the overview of create sales order": "<head>
+  <title>Create Sales Order – SAP ECC</title>
+</head>
+<body>
+
+  <h2>Create Sales Order Process – SAP ECC (Organization-Specific)</h2>
+
+  <p>
+    In our organization, the <strong>Sales Order Creation</strong> process in <strong>SAP ECC</strong> is initiated when a customer places a confirmed purchase request, either through the sales team, customer service, or an integrated e-commerce platform.
+  </p>
+
+  <h3>1. Sales Area Selection</h3>
+  <p>
+    The sales user logs into <strong>SAP GUI</strong> and accesses transaction <strong>VA01</strong> to create a sales order.
+    They select the appropriate <strong>Sales Organization</strong>, <strong>Distribution Channel</strong>, and <strong>Division</strong> based on the customer's region and product type.
+  </p>
+
+  <h3>2. Customer and Order Type Entry</h3>
+  <p>
+    The user enters the <strong>Sold-To Party</strong> and <strong>Ship-To Party</strong> (retrieved from the customer master).
+    Standard order type is typically <strong>OR</strong>, but may vary (e.g., <strong>ZOR</strong> for customized processes).
+  </p>
+
+  <h3>3. Item and Quantity Details</h3>
+  <p>
+    The user inputs <strong>material codes (SKUs)</strong> and <strong>quantities</strong>.
+    The system pulls relevant pricing via <strong>condition records</strong> and applies any organization-specific <strong>discounts, taxes, or surcharges</strong>.
+  </p>
+
+  <h3>4. Availability Check & Credit Control</h3>
+  <p>
+    SAP ECC performs a <strong>real-time availability check (ATP)</strong> and runs a <strong>credit check</strong> based on the customer's credit limit and payment history.
+    Any issues (e.g., blocked credit, stock unavailability) trigger alerts for resolution.
+  </p>
+
+  <h3>5. Delivery & Billing Data</h3>
+  <p>
+    The system auto-fills or the user enters <strong>delivery plant</strong>, <strong>shipping conditions</strong>, and <strong>billing details</strong>.
+    These are validated against <strong>customer master records</strong> and organizational policies.
+  </p>
+
+  <h3>6. Order Review & Save</h3>
+  <p>
+    The sales user reviews all order lines, totals, and terms, then saves the document.
+    A <strong>Sales Order Number</strong> is generated (e.g., 5001234567), triggering downstream processes such as delivery creation (<strong>VL01N</strong>) and billing (<strong>VF01</strong>).
+  </p>
+
+  <h3>Organization-Specific Notes:</h3>
+  <ul>
+    <li>All sales orders above ₹5,00,000 are <strong>auto-routed for approval</strong> via workflow.</li>
+    <li>Orders for strategic accounts are tagged under <strong>Key Account Management</strong> and assigned priority flags.</li>
+    <li>Integration with <strong>SAP SD, MM, and FI</strong> ensures inventory commitment, invoicing, and revenue tracking are streamlined post-order creation.</li>
+  </ul>
+
+</body>"
 };
 
 // Function to send a message and get a response from the bot
