@@ -29,7 +29,10 @@ let rules = {
     <li>Review the order summary and click <strong>Save</strong> to generate the sales order number.</li>
   </ol>
   <p>If you need help reviewing or editing an existing order, feel free to ask.</p>
-I could also help you perform this task. Click <a href="https://my405746.s4hana.cloud.sap/ui?_wfx_=22edd632-f7ef-4694-a823-90ad737ca160&_wfx_stage=production&_wfx_state=null#Shell-home" target="_blank" rel="noopener noreferrer">here</a> to do it on the application`,
+I could also help you perform this task. Click <a href="https://my405746.s4hana.cloud.sap/ui?_wfx_=22edd632-f7ef-4694-a823-90ad737ca160&_wfx_stage=production&_wfx_state=null#Shell-home" target="_blank" rel="noopener noreferrer">here</a> to do it on the application
+ 
+ 
+ `,
   
   "Can you explain the overview of create sales order process": `
     <h3>Create Sales Order Process – SAP ECC</h3>
